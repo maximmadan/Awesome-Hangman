@@ -10,7 +10,6 @@ Awesome Hangman is a fun and interactive game where players guess letters to rev
 
 🤝 How to Contribute:
    - Fork the repository and create a new branch for your feature or bug fix.
-   - Follow coding conventions and write tests for your code.
    - Submit a pull request with a clear description of your changes.
 
 📄 License:
