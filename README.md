@@ -3,7 +3,7 @@
    Java, Git
 
 💻 Installation Instructions:
-   - Clone the repository: `git clone https://github.com/username/hangman.git`
+   - Clone the repository: `git clone https://github.com/maximmadan/Hangman.git`
    - Compile the Java files: `javac Hangman.java`
    - Run the game: `java Hangman`
 
