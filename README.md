@@ -1,6 +1,8 @@
 # Hangman
 Hangman is a fun and interactive game where player guess letters to reveal a hidden word. It's built using Java and provides a simple command-line interface.
 
+I implemented this project by switching from the C programming language to the Java.
+
 🔧 Key Technologies:
    Java, Git
 
