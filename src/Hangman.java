@@ -20,6 +20,66 @@ public class Hangman {
     private static String hideTheWord(String word) {
         return "*".repeat(word.length());
     }
+    private static void printHangman(int attemptsLeft) {
+        switch (attemptsLeft) {
+            case 5:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            case 4:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("  o   |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            case 3:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("  o   |  ");
+                System.out.println("  |   |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            case 2:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("  o   |  ");
+                System.out.println(" /|   |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            case 1:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("  o   |  ");
+                System.out.println(" /|\\  |  ");
+                System.out.println("      |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            case 0:
+                System.out.println("  -----  ");
+                System.out.println("  |   |  ");
+                System.out.println("  o   |  ");
+                System.out.println(" /|\\  |  ");
+                System.out.println(" / \\  |  ");
+                System.out.println("      |  ");
+                System.out.println("=========");
+                break;
+            default:
+                System.out.println("=========");
+        }
+    }
     public static void startGame(Scanner sc) {
         String randomWord = selectRandomWord();
         String hiddenWord = hideTheWord(randomWord);
@@ -44,6 +104,7 @@ public class Hangman {
             if(!correctGuess) {
                 attemptsLeft--;
                 System.out.println("Wrong guess, try again");
+                printHangman(attemptsLeft);
             }
         }
 
@@ -62,7 +123,7 @@ public class Hangman {
             System.out.println("Welcome to Hangman! ");
             System.out.println("Start game 1:");
             System.out.println("Exit game 2:");
-            System.out.println("Please enter your choice: ");
+            System.out.println("Enter your choice: ");
             int choice = sc.nextInt();
 
             switch(choice) {
