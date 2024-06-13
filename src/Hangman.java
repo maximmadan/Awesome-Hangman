@@ -1,5 +1,3 @@
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -30,7 +28,23 @@ public class Hangman {
 
 
         while (attemptsLeft > 0  && guessedWord.toString().contains("*")) {
+            System.out.println("Current word: " + guessedWord);
+            System.out.println("Attempts left: " + attemptsLeft);
+            System.out.println("Enter your word: ");
+            char guess = sc.next().charAt(0);
+            boolean correctGuess = false;
 
+            for(int i = 0; i < randomWord.length(); i++) {
+                if(guess == randomWord.charAt(i)) {
+                    guessedWord.setCharAt(i, guess);
+                    correctGuess = true;
+                }
+            }
+
+            if(!correctGuess) {
+                attemptsLeft--;
+                System.out.println("Wrong guess, try again");
+            }
         }
 
         if (attemptsLeft > 0) {
